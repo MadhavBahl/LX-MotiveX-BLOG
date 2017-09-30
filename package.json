@@ -1,0 +1,23 @@
+{
+  "name": "lx-motivexblog",
+  "version": "1.0.0",
+  "description": "LX - MotiveX : MY MOTIVATIONAL BLOG\r -----------------------------------",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadhavBahlMD/LX-MotiveX-BLOG.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadhavBahlMD/LX-MotiveX-BLOG/issues"
+  },
+  "homepage": "https://github.com/MadhavBahlMD/LX-MotiveX-BLOG#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
