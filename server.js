@@ -8,7 +8,7 @@ app.set('view engine','html');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/',(req,res) => {
-  req.render('index.html');
+  res.render('index.html');
 });
 
 app.listen(port, () => {

@@ -46,6 +46,7 @@
 
 	body {
 		-webkit-text-size-adjust: none;
+
 	}
 
 /* Box Model */
@@ -1191,10 +1192,10 @@
 /* Header */
 
 	#header {
-		-moz-transition: background 1s ease-in-out, height 0.2s ease-in-out;
-		-webkit-transition: background 1s ease-in-out, height 0.2s ease-in-out;
-		-ms-transition: background 1s ease-in-out, height 0.2s ease-in-out;
-		transition: background 1s ease-in-out, height 0.2s ease-in-out;
+		-moz-transition: "background" 1s ease-in-out, height 0.2s ease-in-out;
+		-webkit-transition: "background" 1s ease-in-out, height 0.2s ease-in-out;
+		-ms-transition: "background" 1s ease-in-out, height 0.2s ease-in-out;
+		transition: "background" 1s ease-in-out, height 0.2s ease-in-out;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1210,12 +1211,14 @@
 		display: -ms-flexbox;
 		-ms-flex-align: center;
 		-ms-flex-pack: center;
-		background: rgba(254, 254, 254, 0.85);
+		background: rgba(99,67,80, 0.85);
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: 100vh;
 		z-index: 10001;
+
+
 	}
 
 		#header .inner {
@@ -1250,6 +1253,10 @@
 			text-align: center;
 			box-shadow: 0 0 0 1em #FFF;
 			cursor: default;
+			background: #1D4350;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #A43931, #1D4350);
+
 		}
 
 			#header .inner .content {
@@ -1258,6 +1265,7 @@
 				-ms-transition: opacity 1s ease-in-out;
 				transition: opacity 1s ease-in-out;
 				opacity: 1;
+
 			}
 
 				#header .inner .content h1 {
@@ -1280,6 +1288,10 @@
 				transition: background 1s ease-in-out;
 				margin: 0;
 				border-radius: 30px;
+				background: #ADA996;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB,  #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right, #EAEAEA, #DBDBDB, #ADA996);
+
 			}
 
 				#header .inner .button.hidden {
@@ -1329,6 +1341,7 @@
 				padding-right: 0;
 				background: none;
 				display: inline-block;
+
 			}
 
 				#header.hide .button.hidden:before, #header.preview .button.hidden:before {
@@ -1338,6 +1351,7 @@
 					font-style: normal;
 					font-weight: normal;
 					text-transform: none !important;
+
 				}
 
 				#header.hide .button.hidden:before, #header.preview .button.hidden:before {
@@ -1357,6 +1371,7 @@
 				height: 25em;
 				font-size: .75em;
 				padding: 3em;
+
 			}
 
 		}
@@ -1401,6 +1416,7 @@
 		width: 100%;
 		text-align: center;
 		z-index: 9999;
+
 	}
 
 		#footer.show {
@@ -1419,6 +1435,7 @@
 			color: #FFF;
 			font-size: 1.25em;
 			padding-top: .35em;
+			background: rgb(97,62,64);
 		}
 
 			#footer .info span {
@@ -1446,6 +1463,9 @@
 			background: #e74c3c;
 			padding: 2em;
 			height: 20em;
+			background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350);
 		}
 
 			#footer .inner .content,
@@ -1520,3 +1540,64 @@
 				}
 
 		}
+
+/* ========= FAB ========= */
+
+.fixed-button {
+	background-color: #FF2434;
+	color: #FFFFFF;
+	border: none;
+	outline: none;
+	position: fixed;
+	bottom: 0px;
+	right: 15px;
+	height: 50px;
+	width: 50px;
+	margin-bottom: 20px;
+	border-radius: 30px;
+	box-shadow: 1px 3px 5px #888888;
+  }
+  
+  @keyframes wobble {
+	16.65% {
+	  -webkit-transform: translateY(8px);
+	  -ms-transform: translateY(8px);
+	  transform: translateY(8px);
+	}
+	33.3% {
+	  -webkit-transform: translateY(-6px);
+	  -ms-transform: translateY(-6px);
+	  transform: translateY(-6px);
+	}
+	49.95% {
+	  -webkit-transform: translateY(4px);
+	  -ms-transform: translateY(4px);
+	  transform: translateY(4px);
+	}
+	66.6% {
+	  -webkit-transform: translateY(-2px);
+	  -ms-transform: translateY(-2px);
+	  transform: translateY(-2px);
+	}
+	83.25% {
+	  -webkit-transform: translateY(1px);
+	  -ms-transform: translateY(1px);
+	  transform: translateY(1px);
+	}
+	100% {
+	  -webkit-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  transform: translateY(0);
+	}
+  }
+  
+  .wobble {
+	-webkit-animation-name: wobble;
+	animation-name: wobble;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+  }
